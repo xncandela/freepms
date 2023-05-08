@@ -1,0 +1,12 @@
+Django
+django-colorfield
+pycountry
+pycountry-convert
+django-bootstrap-modal-forms
+crispy-bootstrap5
+djangorestframework
+django-easy-audit
+Pillow==9.5.0
+channels
+daphne
+django-environ

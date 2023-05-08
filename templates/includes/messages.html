@@ -1,0 +1,10 @@
+<div class="row mt-4" id="mensajesDJ">
+    {% if messages %}
+        {% for message in messages %}
+
+            <div class="{% if message.tags %} alert alert-primary {{ message.tags }} {% endif %}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

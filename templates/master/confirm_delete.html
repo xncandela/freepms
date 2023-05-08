@@ -1,0 +1,23 @@
+{% extends "baseBS.html" %}
+{% load static %}
+
+{% load i18n %}
+  {% block body %}
+
+    <div class="row h-100">
+        <div class="col-sm-12 my-auto">
+            <form method="post">
+                {% csrf_token %}
+                <div class="jumbotron">
+                    <h1 class="display-4">Hola!</h1>
+                    <p class="lead">Are you sure you want delete <b>"{{ object }}"</b> ?</p>
+                    <hr class="my-4">
+                    <p>Once deleted it cannot be recovered</p>
+                    <input type="submit" value="Confirm" class="btn btn-danger">
+                    <button onclick="window.history.back();" class="btn btn-dark" type="button">No, I don´t want delete
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

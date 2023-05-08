@@ -1,0 +1,27 @@
+
+    
+{% extends "baseBS.html" %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+{% block content %}
+    <h3>Roomtype</h3>
+    <div class="row m-3">
+        <form method="get">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="{% translate 'Search'%}" aria-label="Search" aria-describedby="Search box" name="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+            </div>
+        </form>
+        <div class="col-1">
+            <a class="btn btn-primary" href="{% url 'master:RoomType-add' %}" role="button">{% translate 'Add' %}</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% render_table table %}
+        </div>
+    </div>
+{% endblock %}
+                    

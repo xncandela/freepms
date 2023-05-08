@@ -1,0 +1,48 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% include 'includes/bs_header.html' %}
+    <script type="text/javascript" src="/admin/jsi18n/"></script>
+    <link rel="stylesheet" href="{% static 'js/taginput/bootstrap-tagsinput.css' %}" type="text/css">
+    <script src="{% static 'js/taginput/bootstrap-tagsinput.js' %}"></script>
+
+    <style>
+        .invalid-feedback {
+            display: initial;
+        }
+
+        .asteriskField {
+            color: red;
+        }
+        {% block stylesheet %} {% endblock %}
+    </style>
+
+
+    <!-- HERE -->
+</head>
+
+<body>
+
+<div class="container">
+    {% block body %} {% block content %} {% endblock %} {% endblock body %}
+</div>
+
+<script>
+
+    $(document).ready(() => {
+      $('.select').select2({
+              theme: "bootstrap-5",
+          }
+      )
+    })
+
+</script>
+
+{% block jscript %} {% endblock %}
+</body>
+
+</html>
